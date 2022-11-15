@@ -23,8 +23,7 @@ public class BadgeCommandListener implements SlashCommandCreateListener {
         switch (interaction.getCommandName()) {
             case "badge" -> {
                 InteractionOriginalResponseUpdater responseUpdater = interaction.respondLater(true).join();
-                responseUpdater.setContent("Nice! Now wait about 24 hours for Discord to recognize your global slash command. Then visit https://discord.com/developers/active-developer to claim your badge.")
-                        .append("Make sure to reset your bot token in the Discord Developer Portal https://discord.com/developers/applications to make sure nothing else can access your token")
+                responseUpdater.setContent("Nice! Now wait about 24 hours for Discord to recognize your global slash command. Then visit https://discord.com/developers/active-developer to claim your badge\nMake sure to reset your bot token in the Discord Developer Portal https://discord.com/developers/applications to make sure nothing else can access your token")
                         .update();
                 new Timer().schedule(
                         new TimerTask() {

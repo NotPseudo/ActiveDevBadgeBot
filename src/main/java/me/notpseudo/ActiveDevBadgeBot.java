@@ -33,7 +33,7 @@ public class ActiveDevBadgeBot {
         }
         try {
             DiscordApi api = new DiscordApiBuilder().setToken(TOKEN).addListener(BadgeBotCommandListener::new).addListener(BasicCommandListener::new).login().join();
-            SlashCommand.with("badgebot", "Run this command in DMs to temporarily start your bot with a slash command",
+            SlashCommand.with("badgebot", "Run this command to temporarily start your bot with a slash command",
                             Arrays.asList(
                                     SlashCommandOption.create(SlashCommandOptionType.STRING, "token", "Your bot token that will activate temporarily", true)
                             )
